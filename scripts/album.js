@@ -112,7 +112,7 @@ var currentlyPlayingSong= null;
 
 window.onload = function () {
     setCurrentAlbum(albumPicasso);
-    /* Given BLOC solution
+    /* Given BLOC solution 
     songListContainer.addEventListener('mouseover', function(event) {
         if (event.target.parentElement.className === 'album-view-song-item') {
             var songItem = getSongItem(event.target);
@@ -121,10 +121,10 @@ window.onload = function () {
                 songItem.innerHTML = playButtonTemplate;
             }
         }
-    });
-    */
+    }); */
+    
     //My solution
-        songListContainer.addEventListener('mouseover', function(event) {
+    songListContainer.addEventListener('mouseover', function(event) {
         if (event.target.parentElement.className === 'album-view-song-item' && event.target.parentElement.querySelector('.song-item-number').innerHTML !== pauseButtonTemplate) {
             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
         }
